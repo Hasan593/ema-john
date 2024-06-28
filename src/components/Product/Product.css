@@ -24,4 +24,5 @@
 }
 .main-button:hover{
     background: gold;
+    cursor: pointer;
 }
