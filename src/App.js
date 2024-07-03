@@ -1,12 +1,25 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Manage from './components/Manage/Manage';
+import NotFound from './components/NotFound/NotFound';
+import Review from './components/Review/Review';
 import Shop from './components/Shop/Shop';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Shop></Shop>
+      <Router>
+        <Routes>
+          <Route path='/shop' element={<Shop/>}/>
+          <Route path='/review' element={<Review/>}/>
+          <Route path='/manage' element={<Manage/>}/>
+          <Route exact path='/' element={<Shop/>}/>
+          <Route path='*' element={<NotFound/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
