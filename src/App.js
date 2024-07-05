@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Manage from './components/Manage/Manage';
 import NotFound from './components/NotFound/NotFound';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 import Review from './components/Review/Review';
 import Shop from './components/Shop/Shop';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/review' element={<Review/>}/>
           <Route path='/manage' element={<Manage/>}/>
           <Route exact path='/' element={<Shop/>}/>
+          <Route exact path='/product/:productKey' element={<ProductDetails/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </Router>

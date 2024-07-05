@@ -20,6 +20,7 @@ const Shop = () => {
             <div className="porduct-container">
                 {
                     products.map(pd => <Product
+                        showButton={true}
                         handle={handle}
                         key={pd.key}
                         product={pd}
